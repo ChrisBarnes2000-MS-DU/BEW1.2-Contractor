@@ -19,3 +19,15 @@ _**NOTE**: Must score higher than a **`70%`** to pass._
 | Public GitHub repo                         |    `5`    |   `00`   |          |
 | No exposed secrets                         |    `5`    |   `00`   |          |
 | **TOTAL**                                  | **`275`** | **`00`** |          |
+
+## ✨ Finishing Touches
+
+Level up and **earn bonus points** via the following _optional_ stretch challenges.
+
+**Each challenge is designed to add polish to your project and make your release shine!**
+
+| Skill              | Level-Up Opportunity                                                               | BONUS | ☑ Done ️ |
+| ------------------ | ---------------------------------------------------------------------------------- | :---: | :------: |
+| **🎉Portfolio +1** | Add your project to your Make School portfolio, linked in your project's `README`. | `10`  |          |
+| **🔌Integrations** | Find a clever way to utilize a third-party API within your project.                | `20`  |          |
+| **📈DevOps**       | Already a Heroku Master? Deploy on any virtual private server (DigitalOcean, AWS)  | `30`  |          |
