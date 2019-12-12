@@ -1,6 +1,6 @@
 from django.urls import path
 
-from locations.views import PageListView, PageCreateView, PageDetailView, PageEditView, detail, results, vote, index
+from locations.views import PageListView, PageCreateView, PageDetailView, PageEditView, detail, results, vote
 
 urlpatterns = [
     path('', PageListView.as_view(), name='list-page'),

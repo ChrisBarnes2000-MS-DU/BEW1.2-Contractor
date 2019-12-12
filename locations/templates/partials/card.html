@@ -4,7 +4,7 @@
     <p class="card-text text-dark">
       {{ page.content|truncatewords_html:30 }}
       <hr>
-      <div class="text-right"><a href="{% url 'wiki-details-page' page.slug %}" title="Read More">Read More</a></div>
+      <div class="text-right"><a href="{% url 'details-page' page.slug %}" title="Read More">Read More</a></div>
   </div>
   <div class="card-footer">
     <small class="text-muted">Last updated {{ page.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ page.author.username }}</b></small>

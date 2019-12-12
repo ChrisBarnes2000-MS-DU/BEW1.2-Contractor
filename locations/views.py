@@ -24,7 +24,7 @@ class PageDetailView(DetailView):
     model = Page
 
     def get(self, request, slug):
-        """ Returns a specific wiki page by slug. """
+        """ Returns a specific locations page by slug. """
         page = self.get_queryset().get(slug__iexact=slug)
         return render(request, 'page.html', {'page': page})
 
@@ -40,7 +40,7 @@ class PageCreateView(CreateView):
             page.author = request.user
             page.published_date = timezone.now()
             page.save()
-            return HttpResponseRedirect(reverse_lazy('wiki-details-page', args=[page.slug]))
+            return HttpResponseRedirect(reverse_lazy('details-page', args=[page.slug]))
         return render(request, 'create.html', {'form': form})
 
 class PageEditView(CreateView):
@@ -55,14 +55,10 @@ class PageEditView(CreateView):
                 page.author = request.user
                 page.published_date = timezone.now()
                 page.save()
-                return redirect('wiki-details-page', slug=page.slug)
+                return redirect('details-page', slug=page.slug)
         else:
             form = PageForm(instance=page)
         return render(request, 'create.html', {'form': form})
-
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the Locations index.")
 
 def detail(request, question_id):
     return HttpResponse("You're looking at question %s." % question_id)
