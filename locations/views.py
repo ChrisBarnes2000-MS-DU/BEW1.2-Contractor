@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.list import ListView
-from .models import Question
+from .models import Question, Page
 
 def index(request):
     return HttpResponse("Hello, world. You're at the Locations index.")
@@ -13,14 +13,14 @@ def index(request):
     return HttpResponse(output)
 """
 
-# class index(ListView):
-#     """ Renders a list of all Pages. """
-#     model = Question
+class PageListView(ListView):
+    """ Renders a list of all Pages. """
+    model = Page
 
-#     def get(self, request):
-#         """ GET a list of Pages. """
-#         pages = self.get_queryset().all()
-#         return render(request, 'list.html', {'pages': pages})
+    def get(self, request):
+        """ GET a list of Pages. """
+        pages = self.get_queryset().all()
+        return render(request, 'list.html', {'pages': pages})
 
 def detail(request, question_id):
     return HttpResponse("You're looking at question %s." % question_id)
