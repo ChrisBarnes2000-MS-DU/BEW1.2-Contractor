@@ -8,7 +8,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 class Page(models.Model):
-    """ Represents a single wiki page. """
+    """ Represents a single page. """
     title = models.CharField(max_length=settings.PAGE_TITLE_MAX_LENGTH, unique=True,
                              help_text="Title of your page.")
     author = models.ForeignKey(User, on_delete=models.PROTECT,
@@ -25,9 +25,9 @@ class Page(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        """ Returns a fully-qualified path for a page (/my-new-wiki-page). """
+        """ Returns a fully-qualified path for a page (/my-new-page). """
         path_components = {'slug': self.slug}
-        return reverse('wiki-details-page', kwargs=path_components)
+        return reverse('details-page', kwargs=path_components)
 
     def save(self, *args, **kwargs):
         """ Creates a URL safe slug automatically when a new a page is created. """

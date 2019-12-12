@@ -10,6 +10,10 @@ from django.utils import timezone
 from locations.forms import PageForm
 from locations.models import Question, Page
 
+def logout_view(request):
+    logout(request)
+    # Redirect to a success page.
+
 class PageListView(ListView):
     """ Renders a list of all Pages. """
     model = Page
