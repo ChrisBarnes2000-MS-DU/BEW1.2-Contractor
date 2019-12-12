@@ -35,6 +35,9 @@ urlpatterns = [
     # Admin Site
     path('admin/', admin.site.urls),
 
+    # API
+    path('api/', include('rest_api.urls')),
+
     # Locations App
     path('locations/', include('locations.urls')),
 
