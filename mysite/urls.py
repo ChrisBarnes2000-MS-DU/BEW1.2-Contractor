@@ -19,13 +19,18 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
-    # Admin Site
-    path('admin/', admin.site.urls),
+from mysite.views import About
 
-    #Accounts
+urlpatterns = [
+    # About Page
+    path('about/', About, name='about'),
+
+    #Accounts app
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
+
+    # Admin Site
+    path('admin/', admin.site.urls),
 
     # Locations App
     path('locations/', include('locations.urls')),
