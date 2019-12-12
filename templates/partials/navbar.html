@@ -22,7 +22,7 @@
             {% if user.is_authenticated %}
                 <div class="text-white">Hello, <strong>{{ user }}</strong>!</div>
                 <a href="{% url 'create-page' %}" class="btn btn-success ml-4">New Page</a>
-                <a href="{% url 'logout' %}" class="btn btn-danger ml-2">Log Out</a>
+                <a href="{% url 'logout' %}" class="btn btn-danger mr-2">Log Out</a>
             {% endif %}
             {% if not user.is_authenticated %}
                 <a href="{% url 'login' %}" class="btn btn-secondary ml-2">Log In</a>
