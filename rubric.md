@@ -6,19 +6,19 @@ _**NOTE**: Must score higher than a **`70%`** to pass._
 
 | Criteria                                   | Possible  |  Earned  | ☑ Done ️ |
 | ------------------------------------------ | :-------: | :------: | :------: |
-| At least 2 apps in project                 |   `40`    |   `00`   |          |
+| At least 2 apps in project                 |   `40`    |   `40`   |    ☑     |
 | At least 2 tests in `tests.py` in each app |   `30`    |   `00`   |          |
-| Modular design                             |   `25`    |   `00`   |          |
+| Modular design                             |   `25`    |   `25`   |    ☑     |
 | RESTful API using Django REST Framework    |   `25`    |   `00`   |          |
-| Template-based front-end interface         |   `25`    |   `00`   |          |
-| Has purpose & fulfills proposal            |   `20`    |   `00`   |    ☑     |
+| Template-based front-end interface         |   `25`    |   `25`   |    ☑     |
+| Has purpose & fulfills proposal            |   `20`    |   `20`   |    ☑     |
 | Integrates an open source app              |   `20`    |   `00`   |          |
 | Deployed & usable                          |   `15`    |   `00`   |          |
-| Includes database migrations in each app   |   `15`    |   `00`   |          |
-| `README` with documentation                |   `10`    |   `00`   |    ☑     |
-| Public GitHub repo                         |    `5`    |   `00`   |    ☑     |
+| Includes database migrations in each app   |   `15`    |   `15`   |    ☑     |
+| `README` with documentation                |   `10`    |   `10`   |    ☑     |
+| Public GitHub repo                         |    `5`    |   `05`   |    ☑     |
 | No exposed secrets                         |    `5`    |   `00`   |          |
-| **TOTAL**                                  | **`240`** | **`00`** |          |
+| **TOTAL**                                  | **`235`** | **`140`** |          |
 
 ## ✨ Finishing Touches
 
