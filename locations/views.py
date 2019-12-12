@@ -1,17 +1,14 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from .models import Question, Page
+from django.views.generic.edit import FormView, CreateView
+from django.http import HttpResponseRedirect, HttpResponse
+from django.contrib.auth import logout
+from django.urls import reverse_lazy
+from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the Locations index.")
-
-"""
-def index(request):
-    latest_question_list = Question.objects.get('-pub_date')
-    output = ', '.join([q.question_text for q in latest_question_list])
-    return HttpResponse(output)
-"""
+from locations.forms import PageForm
+from locations.models import Question, Page
 
 class PageListView(ListView):
     """ Renders a list of all Pages. """
@@ -21,6 +18,51 @@ class PageListView(ListView):
         """ GET a list of Pages. """
         pages = self.get_queryset().all()
         return render(request, 'list.html', {'pages': pages})
+
+class PageDetailView(DetailView):
+    """ Renders a specific page based on it's slug."""
+    model = Page
+
+    def get(self, request, slug):
+        """ Returns a specific wiki page by slug. """
+        page = self.get_queryset().get(slug__iexact=slug)
+        return render(request, 'page.html', {'page': page})
+
+class PageCreateView(CreateView):
+    def get(self, request, *args, **kwargs):
+        context = {'form': PageForm()}
+        return render(request, 'create.html', context)
+
+    def post(self, request, *args, **kwargs):
+        form = PageForm(request.POST)
+        if form.is_valid():
+            page = form.save(commit=False)
+            page.author = request.user
+            page.published_date = timezone.now()
+            page.save()
+            return HttpResponseRedirect(reverse_lazy('wiki-details-page', args=[page.slug]))
+        return render(request, 'create.html', {'form': form})
+
+class PageEditView(CreateView):
+    model = Page
+
+    def get(self, request, slug):
+        page = get_object_or_404(Page, slug=slug)
+        if request.method == "POST":
+            form = PageForm(request.POST, instance=page)
+            if form.is_valid():
+                page = form.save(commit=False)
+                page.author = request.user
+                page.published_date = timezone.now()
+                page.save()
+                return redirect('wiki-details-page', slug=page.slug)
+        else:
+            form = PageForm(instance=page)
+        return render(request, 'create.html', {'form': form})
+
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the Locations index.")
 
 def detail(request, question_id):
     return HttpResponse("You're looking at question %s." % question_id)

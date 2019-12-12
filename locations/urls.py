@@ -1,11 +1,15 @@
 from django.urls import path
 
-from .views import PageListView, detail, results, vote, index
+from locations.views import PageListView, PageCreateView, PageDetailView, PageEditView, detail, results, vote, index
 
 urlpatterns = [
+    path('', PageListView.as_view(), name='list-page'),
+    path('new/', PageCreateView.as_view(), name='create-page'),
+    path('<str:slug>/', PageDetailView.as_view(), name='details-page'),
+    path('<str:slug>/edit/', PageEditView.as_view(), name='edit-page'),
+
     # ex: /locations/
     # path('', index, name='index'),
-    path('', PageListView.as_view(), name='list-page'),
     # ex: /locations/5/
     path('<int:question_id>/', detail, name='detail'),
     # ex: /locations/5/results/
