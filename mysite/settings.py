@@ -137,9 +137,8 @@ STATICFILES_DIRS = [
 PAGE_TITLE_MAX_LENGTH = 600
 
 # Where to redirect during authentication
-LOGIN_REDIRECT_URL = "locations/"
-LOGOUT_REDIRECT_URL = "locations/"
-
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
 # PROTIP:
 # Need to override settings? Create a local_settings.py file
