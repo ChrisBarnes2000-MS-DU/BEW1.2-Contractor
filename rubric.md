@@ -7,7 +7,7 @@ _**NOTE**: Must score higher than a **`70%`** to pass._
 | Criteria                                   | Possible  |  Earned  | ☑ Done ️ |
 | ------------------------------------------ | :-------: | :------: | :------: |
 | At least 2 apps in project                 |   `40`    |   `40`   |    ☑     |
-| At least 2 tests in `tests.py` in each app |   `30`    |   `00`   |          |
+| At least 2 tests in `tests.py` in each app |   `30`    |   `30`   |    ☑     |
 | Modular design                             |   `25`    |   `25`   |    ☑     |
 | RESTful API using Django REST Framework    |   `25`    |   `25`   |    ☑     |
 | Template-based front-end interface         |   `25`    |   `25`   |    ☑     |
@@ -18,7 +18,7 @@ _**NOTE**: Must score higher than a **`70%`** to pass._
 | `README` with documentation                |   `10`    |   `10`   |    ☑     |
 | Public GitHub repo                         |    `5`    |   `05`   |    ☑     |
 | No exposed secrets                         |    `5`    |   `05`   |    ☑     |
-| **TOTAL**                                  | **`235`** | **`185`** |          |
+| **TOTAL**                                  | **`235`** | **`315`** |          |
 
 ## ✨ Finishing Touches
 
