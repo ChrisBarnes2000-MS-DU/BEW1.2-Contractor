@@ -12,13 +12,13 @@ _**NOTE**: Must score higher than a **`70%`** to pass._
 | RESTful API using Django REST Framework    |   `25`    |   `25`   |    ☑     |
 | Template-based front-end interface         |   `25`    |   `25`   |    ☑     |
 | Has purpose & fulfills proposal            |   `20`    |   `20`   |    ☑     |
-| Integrates an open source app              |   `20`    |   `00`   |          |
+| Integrates an open source app              |   `20`    |   `20`   |    ☑     |
 | Deployed & usable                          |   `15`    |   `15`   |    ☑     |
 | Includes database migrations in each app   |   `15`    |   `15`   |    ☑     |
 | `README` with documentation                |   `10`    |   `10`   |    ☑     |
 | Public GitHub repo                         |    `5`    |   `05`   |    ☑     |
 | No exposed secrets                         |    `5`    |   `05`   |    ☑     |
-| **TOTAL**                                  | **`235`** | **`315`** |          |
+| **TOTAL**                                  | **`235`** | **`335`** |          |
 
 ## ✨ Finishing Touches
 
