@@ -38,6 +38,9 @@ urlpatterns = [
     # API
     path('api/', include('rest_api.urls')),
 
+    # Contact
+    path('contact/', include('contact.urls')),
+
     # Locations App
     path('locations/', include('locations.urls')),
 
