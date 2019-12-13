@@ -25,7 +25,7 @@ SECRET_KEY = 'r!7rpukly$qqe*zni0#m=f_@a61u@wfk28kjqk913mrcv@bvq)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'tweet1-2generator.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'locational-trivia.herokuapp.com']
 
 DEFAULT_LOGOUT_URL = '/'
 
