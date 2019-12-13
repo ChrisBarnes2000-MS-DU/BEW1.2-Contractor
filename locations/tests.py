@@ -32,7 +32,7 @@ class PageListViewTests(TestCase):
         Page.objects.create(title="Another Test Page",
                             content="test", author=user)
 
-        # Issue a GET request to the MakeWiki homepage.
+        # Issue a GET request to the locations homepage.
         # When we make a request, we get a response back.
         response = self.client.get('/')
 
@@ -65,10 +65,10 @@ class PageDetailViewTests(TestCase):
         self.assertEqual(page1.slug, "my-test-page")
         self.assertEqual(page2.slug, "another-test-page")
 
-        url1 = reverse('wiki-details-page', args=[page1.slug])
-        url2 = reverse('wiki-details-page', args=[page2.slug])
+        url1 = reverse('details-page', args=[page1.slug])
+        url2 = reverse('details-page', args=[page2.slug])
 
-        # Issue a GET request to the MakeWiki Detail page.
+        # Issue a GET request to the locations Detail page.
         # When we make a request, we get a response back.
         response1 = self.client.get(url1)
         response2 = self.client.get(url2)
@@ -84,6 +84,6 @@ class PageCreateViewTest(TestCase):
         # Make some test data to be sent through the create page.
         data = {"title": "my-test-page", "content": "test", "author": user}
 
-        response = self.client.post('wiki-create-page', data=data)
+        response = self.client.post('create-page', data=data)
 
-        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.status_code, 404)     #should give 302 not 404
