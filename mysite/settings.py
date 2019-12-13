@@ -25,7 +25,7 @@ SECRET_KEY = 'r!7rpukly$qqe*zni0#m=f_@a61u@wfk28kjqk913mrcv@bvq)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'tweet1-2generator.herokuapp.com']
 
 DEFAULT_LOGOUT_URL = '/'
 
@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'accounts',
-    'locations'
+    'locations',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -139,6 +140,9 @@ PAGE_TITLE_MAX_LENGTH = 600
 # Where to redirect during authentication
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+
+# Required for Heroku
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # PROTIP:
 # Need to override settings? Create a local_settings.py file
