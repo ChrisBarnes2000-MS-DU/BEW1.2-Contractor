@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 
 class Page(models.Model):
     """ Represents a single page. """
+    objects = models.Manager()
     title = models.CharField(max_length=settings.PAGE_TITLE_MAX_LENGTH, unique=True,
                              help_text="Title of your page.")
     author = models.ForeignKey(User, on_delete=models.PROTECT,
