@@ -13,7 +13,7 @@ _**NOTE**: Must score higher than a **`70%`** to pass._
 | Template-based front-end interface         |   `25`    |   `25`   |    ☑     |
 | Has purpose & fulfills proposal            |   `20`    |   `20`   |    ☑     |
 | Integrates an open source app              |   `20`    |   `00`   |          |
-| Deployed & usable                          |   `15`    |   `00`   |          |
+| Deployed & usable                          |   `15`    |   `00`   |    ☑     |
 | Includes database migrations in each app   |   `15`    |   `15`   |    ☑     |
 | `README` with documentation                |   `10`    |   `10`   |    ☑     |
 | Public GitHub repo                         |    `5`    |   `05`   |    ☑     |
