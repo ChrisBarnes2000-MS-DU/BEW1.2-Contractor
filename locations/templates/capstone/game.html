@@ -1,151 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- templates/game.html -->
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Locational Trivia Game</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- BOOTSTRAP THEME -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
+{% block content %}
+<div class="row">
+    <div class="col text-center">
+        <h1>Quiz on 'Place Name'</h1>
+    </div>
+</div>
 
-    <!-- CUSTOM STYLES -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+<div class="row mt-3">
+    <div class="col" style="margin-top: 10em;">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores neque ullam ut, eveniet ratione eos, fuga tempora vero ex a illo qui sint quo odio, fugit odit quibusdam itaque nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, non, doloremque veniam consequuntur laborum tempore odit tempora eum dolores fugiat minus, blanditiis possimus quis omnis soluta molestiae nobis magni sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugit error earum nihil accusamus necessitatibus reprehenderit dignissimos modi ducimus laudantium deserunt similique numquam fugiat obcaecati porro, quos aperiam expedita. Vero.
+        </p>
+    </div>
+    <div class="col text-center">
+        <a href="https://placeholder.com"><img src="https://via.placeholder.com/400x400?text=Image+of+this+place"></a>
+    </div>
+</div>
 
-</head>
-
-<body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.html">Locational Trivia Game</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <fieldset class="form-group">
+            <legend>Provide One Answer</legend>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1">
+                    Option one is this and that—be sure to include why it's great
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Option two can be something else and selecting it will deselect option one
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+                    Option three shall also be something else and selecting it will deselect the other options
+                </label>
+            </div>
+        </fieldset>
     
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="game.html">Random Place <span class="sr-only">(current)</span></a>
-                </li>
-            <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li> -->
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col text-center">
-                <h1>Quiz on 'Place Name'</h1>
+        <fieldset class="form-group">
+            <legend>Provide Multiple Answers</legend>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Option one is this and that—be sure to include why it's great
+                </label>
             </div>
-        </div>
-
-        <div class="row mt-3">
-            <div class="col" style="margin-top: 10em;">
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores neque ullam ut, eveniet ratione eos, fuga tempora vero ex a illo qui sint quo odio, fugit odit quibusdam itaque nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, non, doloremque veniam consequuntur laborum tempore odit tempora eum dolores fugiat minus, blanditiis possimus quis omnis soluta molestiae nobis magni sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugit error earum nihil accusamus necessitatibus reprehenderit dignissimos modi ducimus laudantium deserunt similique numquam fugiat obcaecati porro, quos aperiam expedita. Vero.
-                </p>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Option two may be the reason why
+                </label>
             </div>
-            <div class="col text-center">
-                <a href="https://placeholder.com"><img src="https://via.placeholder.com/400x400?text=Image+of+this+place"></a>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <fieldset class="form-group">
-                    <legend>Provide One Answer</legend>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1">
-                            Option one is this and that—be sure to include why it's great
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                            Option two can be something else and selecting it will deselect option one
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
-                            Option three shall also be something else and selecting it will deselect the other options
-                        </label>
-                    </div>
-                </fieldset>
-            
-                <fieldset class="form-group">
-                    <legend>Provide Multiple Answers</legend>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="">
-                            Option one is this and that—be sure to include why it's great
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="">
-                            Option two may be the reason why
-                        </label>
-                    </div>
-                </fieldset>
-            
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-            <div class="col-md-4"></div>
-        </div> <!-- end Row -->
-    </div> <!-- end Container-->
-
-    <!-- Footer -->
-    <footer class='page-footer text-white bg-info mt-5 pt-3'>
-        <div class='container-fluid text-center'>
-            <div class='row'>
-                <hr class='clearfix w-100 d-md-none pb-3'>
-                <div class='col-md-6 mb-md-0 mb-3'>
-                    <h5 class='text-uppercase'>Links</h5>
-                    <ul class='list-unstyled'>
-                        <li><a href='https://facebook.com'>facebook</a></li>
-                        <li><a href='https://Youtube.com'>Youtube</a></li>
-                    </ul>
-                </div>
-                <div class='col-md-6 mb-md-0 mb-3'>
-                    <h5 class='text-uppercase'>Links</h5>
-                    <ul class='list-unstyled'>
-                        <li><a href='https://pirhotechs.com'>pirhotechs</a></li>
-                        <li><a href='#!'>Contact us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class='footer-copyright text-center py-3'>© 2018 Copyright:
-            <!-- <a href='https://mdbootstrap.com/education/bootstrap/'> MDBootstrap.com</a> -->
-        </div>
-    </footer>
+        </fieldset>
     
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <div class="col-md-4"></div>
+</div> <!-- end Row -->
+{% endblock %}
