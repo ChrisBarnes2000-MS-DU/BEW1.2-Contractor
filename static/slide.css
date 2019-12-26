@@ -1,0 +1,164 @@
+#slideshow
+{
+  list-style: none;
+  color: #FFF;
+}
+
+#slideshow span
+{
+  display: block;
+}
+
+#wrapper
+{
+  width: 606px;
+  margin: 1px auto;
+  display: none;
+}
+
+#wrapper *
+{
+  margin: 0;
+  padding: 0;
+}
+
+#fullsize
+{
+  position: relative;
+  width: 600px;
+  height: 460px;
+  margin: 3px;
+  background: #000000;
+}
+
+#information
+{
+  position: absolute;
+  width: auto;
+  bottom: 0;
+  left: 138px;
+  right: 138px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #000;
+  overflow: hidden;
+  z-index: 200;
+  opacity: 0.7;
+  /* IE 8 fix below 
+  filter:alpha(opacity=70) */
+}
+
+#information h3
+{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  font-size: 17px;
+}
+
+#information p
+{
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#image
+{
+  width: 600px;
+}
+
+#image img
+{
+  position: absolute;
+  z-index: 25;
+  width: auto;
+}
+
+.imgnav
+{
+  position: absolute;
+  width: 25%;
+  height: 306px;
+  cursor: pointer;
+  z-index: 150;
+}
+
+#imgprev
+{
+  left: 0;
+  background: url('slideshow/display/left.png') no-repeat left center;
+}
+
+#imgnext
+{
+  right: 0;
+  background: url('slideshow/display/right.png') no-repeat right center;
+}
+
+#imglink
+{
+  position: absolute;
+  height: 306px;
+  width: 100%;
+  z-index: 100;
+  opacity: 0.4;
+  /* IE 8 fix below 
+  filter:alpha(opacity=40)}
+  /*.linkhover {background:url(Images/link.png) center center no-repeat}*/
+}
+
+#thumbnails
+{
+  margin-top: 17px;
+}
+
+#slideleft
+{
+  float: left;
+  width: 20px;
+  height: 81px;
+  background: url('slideshow/display/scroll-left.png') no-repeat center;
+  }
+
+#slideleft:hover
+{
+  background-color: #000;
+}
+
+#slideright
+{
+  float: right;
+  width: 20px;
+  height: 81px;
+  background: url('slideshow/display/scroll-right.png') no-repeat center;
+  }
+
+#slideright:hover
+{
+  background-color: #000;
+}
+
+#slidearea
+{
+  float: left;
+  position: relative;
+  width: 556px;
+  margin-left: 5px;
+  height: 81px;
+  overflow: hidden;
+}
+
+#slider
+{
+  position: absolute;
+  left: 0;
+  height: 81px;
+}
+
+#slider img
+{
+  cursor: pointer;
+  padding: 2px;
+}
