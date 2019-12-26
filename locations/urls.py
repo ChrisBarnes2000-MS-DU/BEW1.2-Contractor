@@ -1,4 +1,6 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 from locations.views import PageListView, PageCreateView, PageDetailView, PageEditView, detail, results, vote
 
@@ -16,4 +18,4 @@ urlpatterns = [
     path('<int:question_id>/results/', results, name='results'),
     # ex: /locations/5/vote/
     path('<int:question_id>/vote/', vote, name='vote'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

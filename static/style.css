@@ -2,6 +2,10 @@ body {
     background: lightgrey url("images/background.jpg") center;
 }
 
+h1 {
+    color: orangered;
+}
+
 h2, h3{
     color: lightcoral;
 }
