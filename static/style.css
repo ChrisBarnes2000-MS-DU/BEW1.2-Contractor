@@ -34,6 +34,6 @@ label {
 }
 
 .carousel-indicators li img{
-    width: 75px;
-    height: 75px;
+    width: 75px !important;
+    height: 75px !important;
 }
