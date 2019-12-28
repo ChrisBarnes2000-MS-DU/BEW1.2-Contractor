@@ -18,58 +18,42 @@ label {
     color: white;
 }
 
-.fa-edit{
+.fa-edit {
     margin-top: 0.5em;
     margin-left: 2em;
     font-size: large;
     color: red;
 }
 
-#thumbnails
-{
-  margin-top: 17px;
+#slideleft {
+    float: left;
+    width: 20px;
+    height: 80px;
+    background: url('slideshow/display/scroll-left.png') no-repeat center;
 }
 
-#slideleft
-{
-  float: left;
-  width: 20px;
-  height: 81px;
-  background: url('slideshow/display/scroll-left.png') no-repeat center;
-  }
-
-#slideleft:hover, #slideright:hover
-{
-  background-color: #000;
+#slideright {
+    float: right;
+    width: 20px;
+    height: 80px;
+    background: url('slideshow/display/scroll-right.png') no-repeat center;
 }
 
-#slideright
-{
-  float: right;
-  width: 20px;
-  height: 81px;
-  background: url('slideshow/display/scroll-right.png') no-repeat center;
+#slideleft:hover, #slideright:hover {
+    background-color: #000;
 }
 
-#slidearea
-{
-float: left;
-position: relative;
-width: 556px;
-margin-left: 5px;
-height: 81px;
-overflow: hidden;
+#slider {
+    position: relative;
+    width: 512px;
+    height: 80px;
+    overflow: hidden;
 }
 
-#slider
-{
-  position: absolute;
-  left: 0;
-  height: 81px;
-}
-
-#slider img
-{
-  cursor: pointer;
-  padding: 2px;
+#slider img {
+    cursor: pointer;
+    padding: 2px;
+    width: 125px;
+    height: 75px;
+    opacity: 0.7;
 }
