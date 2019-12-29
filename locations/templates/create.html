@@ -6,6 +6,6 @@
         {% csrf_token %}
         {{ form.as_p }}
         <input type="hidden" name="author" value="{{ user }}">
-        <input type="submit" value="Save">
+        <input class="btn btn-success center" type="submit" value="Save">
     </form>
 {% endblock %}
