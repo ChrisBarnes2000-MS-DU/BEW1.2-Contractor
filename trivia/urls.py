@@ -2,11 +2,11 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from trivia.views import detail, results, vote
+from trivia.views import index, detail, results, vote
 
 urlpatterns = [
     # ex: /quiz/
-    # path('', index, name='index'),
+    path('', index, name='index'),
     # ex: /quiz/5/
     path('<int:question_id>/', detail, name='detail'),
     # ex: /quiz/5/results/

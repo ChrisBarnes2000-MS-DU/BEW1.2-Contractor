@@ -44,7 +44,7 @@ urlpatterns = [
     # Locations App
     path('locations/', include('locations.urls')),
 
-    # Quiz App
+    # trivia App
     path('trivia/', include('trivia.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

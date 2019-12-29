@@ -47,10 +47,6 @@ INSTALLED_APPS = [
     'locations',
     'rest_framework',
     'trivia',
-    # 'multichoice',
-    # 'true_false',
-    # 'quiz',
-    # 'essay',
 ]
 
 MIDDLEWARE = [
