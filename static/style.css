@@ -24,12 +24,18 @@ h3 a, h3 a:hover, h3 a:visited {
 }
 
 label {
+    font-size: x-large;
     color: white;
 }
 
 .fa-edit {
     margin-top: 0.2em;
     margin-left: 0.3em;
+    font-size: xx-large;
+    color: red;
+}
+
+.fa-trash {
     font-size: xx-large;
     color: red;
 }

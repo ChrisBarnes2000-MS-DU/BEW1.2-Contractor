@@ -10,7 +10,7 @@ def logout_view(request):
     # Redirect to a success page.
 
 class PageListView(ListView):
-    template_name = 'wiki/list.html'
+    template_name = 'locations/list.html'
     context_object_name = 'pages'
 
     def get_queryset(self):
@@ -18,7 +18,7 @@ class PageListView(ListView):
 
 class PageDetailView(DetailView):
     model = Page
-    template_name = 'wiki/page.html'
+    template_name = 'locations/page.html'
 
 class PageCreateView(CreateView):
     model = Page
@@ -38,8 +38,7 @@ class PageEditView(UpdateView):
 
 class PageDeleteView(DeleteView):
     model = Page
-    success_url = reverse_lazy('wiki-list-page')
-
+    success_url = reverse_lazy('list-page')
 
 
 def detail(request, question_id):
