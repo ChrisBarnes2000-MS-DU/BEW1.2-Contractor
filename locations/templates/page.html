@@ -4,10 +4,10 @@
   <div class="row">
     <div class="col m-4">
         <div class="row">
-            <h3>
+            <h1>
                 {{ page.title }}
-                <small class="text-muted">Last updated {{ page.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ page.author.username }}</b></small>
-            </h3>
+                <small class="text-muted">Last updated by <b>{{ page.author.username }}</b> on {{ page.modified|date:"SHORT_DATETIME_FORMAT" }} </small>
+            </h1>
             {% if user.is_authenticated %}
                 <a href="{% url 'edit-page' slug=page.slug %}"><i class="fas fa-edit"></i></a>
             {% endif %}

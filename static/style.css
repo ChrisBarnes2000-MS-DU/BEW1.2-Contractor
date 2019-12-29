@@ -6,12 +6,21 @@ h1 {
     color: orangered;
 }
 
-h2, h3{
-    color: lightcoral;
+h2, h3, h4, p {
+    color: white;
 }
 
-p {
-    color: white;
+ul {
+    color:  white;
+    font-size: x-large;
+}
+
+h3 a, h3 a:hover, h3 a:visited {
+    color: #007bff
+}
+
+.card a, .card a:hover, .card a:visited {
+    color: #007bff
 }
 
 label {
@@ -19,9 +28,9 @@ label {
 }
 
 .fa-edit {
-    margin-top: 0.5em;
-    margin-left: 2em;
-    font-size: large;
+    margin-top: 0.2em;
+    margin-left: 0.3em;
+    font-size: xx-large;
     color: red;
 }
 
