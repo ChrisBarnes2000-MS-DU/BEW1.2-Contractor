@@ -1,6 +1,4 @@
-from django.views.generic.detail import DetailView
-from django.views.generic.list import ListView
-from django.views.generic.edit import FormView, CreateView
+from django.views.generic import CreateView, DetailView, ListView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth import logout
 from django.urls import reverse_lazy
@@ -11,8 +9,8 @@ from locations.forms import PageForm
 from locations.models import Question, Page
 
 def logout_view(request):
+    # Redirect to a success page in settings.py.
     logout(request)
-    # Redirect to a success page.
 
 class PageListView(ListView):
     """ Renders a list of all Pages. """
