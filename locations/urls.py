@@ -2,7 +2,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from locations.views import PageListView, PageCreateView, PageDetailView, PageEditView, detail, results, vote
+from locations.views import PageListView, PageCreateView, PageDetailView, PageEditView, PageDeleteView, detail, results, vote
 
 urlpatterns = [
     # ex: /locations
@@ -21,5 +21,7 @@ urlpatterns = [
     path('<str:slug>/', PageDetailView.as_view(), name='details-page'),
     # ex: /locations/edit/
     path('<str:slug>/edit/', PageEditView.as_view(), name='edit-page'),
+    # ex: /locations/delete/
+    path('<str:slug>/delete/', PageDeleteView.as_view(), name='delete-page'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
