@@ -2,6 +2,12 @@ body {
     background: lightgrey url("images/background.jpg") center;
 }
 
+.footer-copyright{
+    font-size: large;
+    font-weight: 600;
+    padding-top: 4em;
+    color: black;
+}
 h1 {
     color: orangered;
 }
@@ -15,11 +21,11 @@ ul {
     font-size: x-large;
 }
 
-h3 a, h3 a:hover, h3 a:visited {
+h3 a, h3 a:hover{
     color: #007bff
 }
 
-.card a, .card a:hover, .card a:visited {
+.card a, .card a:hover{
     color: #007bff
 }
 
@@ -37,6 +43,14 @@ label {
 
 .fa-trash {
     font-size: xx-large;
+    color: red;
+}
+
+.fa-facebook {
+    color: blue;
+}
+
+.fa-youtube {
     color: red;
 }
 
