@@ -1,19 +1,36 @@
 from django.contrib import admin
-from trivia.models import Question, Choice
+from trivia.models import Exam, Question
 
-# Register your models here.
-class ChoiceInline(admin.TabularInline):
-    model = Choice
+admin.site.register(Exam)
+admin.site.register(Question)
 
-class QuestionAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None,               {'fields': ['question_text']}),
-        ('Date information', {'fields': [
-         'pub_date'], 'classes': ['collapse']}),
-    ]
-    inlines = [ChoiceInline]
-    list_display = ('question_text', 'pub_date', 'was_published_recently')
-    list_filter = ['pub_date']
-    search_fields = ['question_text']
+# from trivia.models import Quiz, Question, Answers
 
-admin.site.register(Question, QuestionAdmin)
+# class AnswersInline(admin.TabularInline):
+#     model = Answers
+
+# class QuestionAdmin(admin.ModelAdmin):
+#     fieldsets = [
+#         (None,               {'fields': ['question_text']}),
+#         ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
+#     ]
+#     inlines = [AnswersInline]
+#     list_display = ('question_text', 'pub_date', 'was_published_recently')
+#     list_filter = ['pub_date']
+#     search_fields = ['question_text']
+
+# class QuestionsInline(admin.TabularInline):
+#     model = Question
+
+# class QuizAdmin(admin.ModelAdmin):
+#     fieldsets = [
+#         (None,               {'fields': ['quiz_tittle']}),
+#         ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
+#     ]
+#     inlines = [QuestionsInline]
+#     list_display = ('quiz_tittle', 'pub_date', 'was_published_recently')
+#     list_filter = ['pub_date']
+#     search_fields = ['quiz_tittle']
+
+# admin.site.register(Quiz, QuizAdmin)
+# admin.site.register(Question, QuestionAdmin)
