@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Exam(models.Model):
     objects = models.Manager()
     name = models.CharField(max_length=100, default="Exam Name")
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __unicode__(self):
         return self.name
