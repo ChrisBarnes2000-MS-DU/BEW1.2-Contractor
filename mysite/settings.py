@@ -28,7 +28,7 @@ SECRET_KEY = 'r!7rpukly$qqe*zni0#m=f_@a61u@wfk28kjqk913mrcv@bvq)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', "localhost", 'locational-trivia.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', "localhost", 'locational-trivia-old.herokuapp.com']
 
 DEFAULT_LOGOUT_URL = '/'
 

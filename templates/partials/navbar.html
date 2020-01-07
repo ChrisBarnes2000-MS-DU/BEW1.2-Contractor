@@ -14,12 +14,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'list-page' %}">Locations</a>
             </li>
+            {% if user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'trivia' %}">Trivia</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'score-board' %}">High Score</a>
+            </li>
+            {% endif %}
         </ul>
         <form class="form-inline ml-auto">
             {% if user.is_authenticated %}

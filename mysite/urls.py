@@ -19,7 +19,7 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from mysite.views import Index, About
+from mysite.views import Index, About, Score_board
 
 urlpatterns = [
     # Index Page
@@ -46,5 +46,8 @@ urlpatterns = [
 
     # trivia App
     path('trivia/', include('trivia.urls')),
+
+    #High score page
+    path('score/', Score_board, name='score-board'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
