@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-def trivia(request):
+def trivia(request, slug):
     """View function for home page of TRIVIA."""
     template_name = 'trivia/game.html'
 
@@ -9,8 +9,8 @@ def trivia(request):
     # page = Page.objects.get(Page.slug)
 
     context = {
+        'slug': slug,
         # 'num_questions': num_questions,
-        'page': "Tittle",
     }
 
     # Render the HTML template index.html with the data in the context variable

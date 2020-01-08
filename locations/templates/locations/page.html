@@ -16,6 +16,7 @@
         <p>{{ page.content|linebreaksbr }}</p>
         <hr>
         <a href="{% url 'list-page' %}" class="btn btn-success">Back to List</a>
+        <a href="{% url 'trivia' slug=page.slug %}" class="btn btn-primary">Trivia</a>
     </div>
   </div>
 {% endblock %}
