@@ -2,12 +2,24 @@ body {
     background: lightgrey url("images/background.jpg") center;
 }
 
+.page-footer {
+margin-top: 3vh !important;
+}
+
+#footer {
+position: absolute;
+bottom: 0;
+right: 0;
+left: 0;
+}
+
 .footer-copyright{
     font-size: large;
     font-weight: 600;
     padding-top: 4em;
     color: black;
 }
+
 h1 {
     color: orangered;
 }

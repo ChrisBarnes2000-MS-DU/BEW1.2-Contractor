@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from trivia.models import Question
+from trivia.models import Question, Choice
 
 def trivia(request, slug):
     """View function for home page of TRIVIA."""
@@ -7,12 +7,14 @@ def trivia(request, slug):
 
     # Generate counts of some of the main objects
     questions = Question.objects.filter(quiz__slug=slug)
+    choices = Choice.objects.filter(question__quiz__slug=slug)
     num_questions = questions.count()
 
     context = {
         'slug': slug,
         'num_questions': num_questions,
         'questions': questions,
+        'choices': choices,
     }
 
     # Render the HTML template index.html with the data in the context variable

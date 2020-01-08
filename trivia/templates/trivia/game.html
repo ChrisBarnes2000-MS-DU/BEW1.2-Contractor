@@ -31,6 +31,10 @@
 
         {% for question in questions %}
             <h4>{{ question }}</h5>
+                {% for choice in choices %}
+                    <p>{{ choice }}</p>
+                    <!-- <input type="radio"> -->
+                {% endfor %}
         {% endfor %}
 
         <!-- <fieldset class="form-group">
@@ -70,8 +74,11 @@
                 </legend>
             </div>
         </fieldset> -->
-    
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <br>
+        <hr>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </div>
     <div class="col-md-2"></div>
 </div> <!-- end Row -->
