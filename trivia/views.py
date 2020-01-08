@@ -6,12 +6,13 @@ def trivia(request, slug):
     template_name = 'trivia/game.html'
 
     # Generate counts of some of the main objects
-    num_questions = Question.objects.all().count()
-    # page = Page.objects.get(Page.slug)
+    questions = Question.objects.filter(quiz__slug=slug)
+    num_questions = questions.count()
 
     context = {
         'slug': slug,
         'num_questions': num_questions,
+        'questions': questions,
     }
 
     # Render the HTML template index.html with the data in the context variable
