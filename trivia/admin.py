@@ -8,7 +8,7 @@ class ExamAdmin(admin.ModelAdmin):
 
 class QuestionAdmin(admin.ModelAdmin):
     """ Show helpful fields on the changelist page. """
-    list_display = ('content', 'created', 'modified')
+    list_display = ('content', 'author', 'created', 'modified')
 
 
 admin.site.register(Exam, ExamAdmin)
