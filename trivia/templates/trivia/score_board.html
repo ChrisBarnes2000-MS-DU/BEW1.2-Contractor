@@ -1,0 +1,40 @@
+<!-- trivia/game.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Top 10 High Scores</h1>
+<hr>
+{% if highscores %}
+    <!-- There is at least one highscore available -->
+    {% for score in highscores %}
+    <div class="score ml-auto mr-auto mb-3 text-center" style="opacity: 75%; background-color: gray; width: 300px;">
+        <h5 class="card-header "><strong>{{ user }} {{ score }}</strong></h5>
+    </div>
+    {% endfor %}
+    {% if highscores|length < 10 %}
+    <div class="score ml-auto mr-auto mb-3 text-center" style="opacity: 75%; background-color: gray; width: 300px;">
+        <h5 class="card-header "><strong>{{ user }} "Empty"</strong></h5>
+    </div>
+    {% endif %}
+    {% else %}
+    <div class="alert alert-primary" role="alert">No Scores to display.</div>
+{% endif %}
+
+<!-- <div class="row mt-3">
+    <div class="col" style="margin-top: 3em; margin-bottom: 3em;">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores neque ullam ut, eveniet ratione eos,
+            fuga tempora vero ex a illo qui sint quo odio, fugit odit quibusdam itaque nihil. Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit. Aliquam, non, doloremque veniam consequuntur laborum tempore odit
+            tempora eum dolores fugiat minus, blanditiis possimus quis omnis soluta molestiae nobis magni sunt? Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugit error earum nihil accusamus necessitatibus
+            reprehenderit dignissimos modi ducimus laudantium deserunt similique numquam fugiat obcaecati porro, quos
+            aperiam expedita. Vero.
+        </p>
+    </div>
+    <div class="col text-center">
+        <a href="https://placeholder.com"><img src="https://via.placeholder.com/250x250?text=Image+of+this+place"></a>
+    </div>
+</div> -->
+
+{% endblock %}

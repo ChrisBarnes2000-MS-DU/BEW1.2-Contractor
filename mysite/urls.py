@@ -19,7 +19,8 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from mysite.views import Index, About, Score_board
+from mysite.views import Index, About
+from trivia.views import Score_board
 
 urlpatterns = [
     # Index Page

@@ -1,0 +1,73 @@
+<!-- trivia/game.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col text-center">
+        <h1>Quiz on {{ page.title }}, {{ num_questions }}</h1>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col" style="margin-top: 3em;">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores neque ullam ut, eveniet ratione eos,
+            fuga tempora vero ex a illo qui sint quo odio, fugit odit quibusdam itaque nihil. Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit. Aliquam, non, doloremque veniam consequuntur laborum tempore odit
+            tempora eum dolores fugiat minus, blanditiis possimus quis omnis soluta molestiae nobis magni sunt? Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugit error earum nihil accusamus necessitatibus
+            reprehenderit dignissimos modi ducimus laudantium deserunt similique numquam fugiat obcaecati porro, quos
+            aperiam expedita. Vero.
+        </p>
+    </div>
+    <div class="col text-center">
+        <a href="https://placeholder.com"><img src="https://via.placeholder.com/250x250?text=Image+of+this+place"></a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <!-- <fieldset class="form-group">
+            <label>Provide One Answer</label>
+            <div class="form-check">
+                <legend class="form-check-legend">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1">
+                    Option one is this and that—be sure to include why it's great
+                </legend>
+            </div>
+            <div class="form-check">
+                <legend class="form-check-legend">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Option two can be something else and selecting it will deselect option one
+                </legend>
+            </div>
+            <div class="form-check">
+                <legend class="form-check-legend">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+                    Option three shall also be something else and selecting it will deselect the other options
+                </legend>
+            </div>
+        </fieldset> -->
+
+        <!-- <fieldset class="form-group">
+            <label>Provide Multiple Answers</label>
+            <div class="form-check">
+                <legend class="form-check-legend">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Option one is this and that—be sure to include why it's great
+                </legend>
+            </div>
+            <div class="form-check">
+                <legend class="form-check-legend">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Option two may be the reason why
+                </legend>
+            </div>
+        </fieldset>
+    
+        <button type="submit" class="btn btn-primary">Submit</button> -->
+    </div>
+    <div class="col-md-4"></div>
+</div> <!-- end Row -->
+{% endblock %}

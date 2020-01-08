@@ -5,6 +5,3 @@ def Index(request):
 
 def About(request):
     return render(request, 'about.html')
-
-def Score_board(request):
-    return render(request, 'score.html')

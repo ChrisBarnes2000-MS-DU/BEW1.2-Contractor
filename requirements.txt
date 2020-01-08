@@ -1,4 +1,7 @@
 Django==3.0
+django-db==0.0.7
+django-leaderboard==0.1.0
+django-model-utils==4.0.0
 djangorestframework==3.10.3
 python-dotenv==0.10.3
 pytz==2019.3

@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from .views import trivia
 
 urlpatterns = [
-    # ex: /locations
+    # ex: /trivia
     path('', trivia, name='trivia'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
