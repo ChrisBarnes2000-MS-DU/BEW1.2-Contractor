@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.views import generic
 from django.urls import reverse
 
-from trivia.models import Question, Answer
+from trivia.models import Question, Choice
 from locations.models import Page
 
 def trivia(request, slug):
@@ -13,7 +13,7 @@ def trivia(request, slug):
 
     # Generate counts of some of the main objects
     questions = Question.objects.filter(quiz__slug=slug)
-    choices = Answer.objects.filter(question__quiz__slug=slug).order_by('created')
+    choices = Choice.objects.filter(question__quiz__slug=slug).order_by('created')
     num_questions = questions.count()
 
     context = {
