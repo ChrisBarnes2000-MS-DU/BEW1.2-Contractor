@@ -7,8 +7,8 @@ class ChoiceInline(admin.TabularInline):
 
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [ChoiceInline]
-    list_display = ('content', 'points', 'author', 'created', 'modified')
-    list_filter = ['quiz', 'created']
-    search_fields = ['quiz', 'content', 'author']
+    list_display = ('content', 'multiple', 'points', 'created', 'modified')
+    list_filter = ['quiz', 'created', 'multiple']
+    search_fields = ['quiz', 'content', 'multiple']
 
 admin.site.register(Question, QuestionAdmin)

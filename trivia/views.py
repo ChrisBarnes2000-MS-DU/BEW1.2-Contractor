@@ -1,10 +1,12 @@
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import render, redirect
 from django.utils import timezone
 from django.views import generic
 from django.urls import reverse
 
 from trivia.models import Question, Choice
+from trivia.forms import QuizForm
 from locations.models import Page
 
 def trivia(request, slug):
@@ -26,18 +28,38 @@ def trivia(request, slug):
     # Render the HTML template index.html with the data in the context variable
     return render(request, template_name, context=context)
 
+
+# # /trivia/san-francisco/ with "san-francisco" being the quiz slug.
+# def render_quiz(request, slug):
+#     template_name = 'trivia/game.html'
+#     quiz = get_object_or_404(Page, slug)
+#     form = QuizForm(questions=quiz.question_set.all())
+#     if request.method == "POST":
+#         form = QuizForm(request.POST, questions=quiz.question_set.all())
+#         if form.is_valid():  # Will only ensure the option exists, not correctness.
+#             attempt = form.save()
+#             return redirect(attempt)
+#     return render(request, template_name, {"form": form})
+
+
+
+
+
+
+
+
 # def answer(request, slug):
 #     exam = get_object_or_404(Page, slug=slug)
 #     try:
 #         selected_choices = exam.choice_set.get(slug=request.POST['choice'])
 #     except (KeyError, Choice.DoesNotExist):
 #         # Redisplay the question voting form.
-#         return render(request, 'location/page.html', {
+#         return render(request, 'trivia/game.html', {
 #             'exam': exam,
 #             'error_message': "You didn't select a choice.",
 #         })
 #     else:
-#         selected_choice.votes += 1
+#         selected_choices.
 #         selected_choice.save()
 #         # Always return an HttpResponseRedirect after successfully dealing
 #         # with POST data. This prevents data from being posted twice if a
@@ -53,6 +75,18 @@ def trivia(request, slug):
 #         Excludes any questions that aren't published yet.
 #         """
 #         return Question.objects.filter(pub_date__lte=timezone.now())
+
+
+
+
+
+
+
+
+
+
+
+
 
 def Score_board(request):
     template_name = 'trivia/score_board.html'

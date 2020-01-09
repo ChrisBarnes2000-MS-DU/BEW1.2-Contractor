@@ -9,13 +9,13 @@ class Question(models.Model):
     """ Represents a question. """
     objects = models.Manager()
     quiz = models.ForeignKey(Page, on_delete=models.CASCADE)
-    author = models.ForeignKey(User, on_delete=models.PROTECT, help_text="The user that posted this question.")
 
     created = models.DateTimeField(auto_now_add=True, help_text="The date&time this question was created. Automatically generated when the model saves.")
     modified = models.DateTimeField(auto_now=True, help_text="The date&time this question was updated. Automatically generated when the model updates.")
 
+    multiple = models.BooleanField(default=False, help_text="Is this the multiple choice answer")
     points = models.IntegerField(default=10, help_text="number of points given for getting the correct answer to this question")
-    content = models.TextField(default="Write the content of your question here.")
+    content = models.CharField(max_length=200, default="Write the content of your question here.")
 
     def __str__(self):
         return self.content
@@ -28,7 +28,7 @@ class Choice(models.Model):
     created = models.DateTimeField(auto_now_add=True, help_text="The date&time this question was created. Automatically generated when the model saves.")
     modified = models.DateTimeField(auto_now=True, help_text="The date&time this question was updated. Automatically generated when the model updates.")
 
-    content = models.TextField(max_length=200, default="Write the content of your question here.",)
+    content = models.CharField(max_length=200, default="Write the content of your question here.",)
     correct = models.BooleanField(default=False, help_text="Is this the correct answer")
 
     def was_published_recently(self):
