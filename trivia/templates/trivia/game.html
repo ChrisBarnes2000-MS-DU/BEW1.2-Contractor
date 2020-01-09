@@ -10,7 +10,8 @@
 
 <div class="row mb-5">
     <div class="col-md-2"></div>
-    <form action="">
+    <form action="" method="POST">
+    <!-- {% csrf_token %} -->
     <div class="col-md-8">
         {% for question in questions %}<h4>{{ question }}</h5>
             {% for choice in choices %} {% if choice.question == question %}
