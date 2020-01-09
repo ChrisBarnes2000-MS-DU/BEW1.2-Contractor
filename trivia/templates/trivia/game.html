@@ -4,24 +4,7 @@
 {% block content %}
 <div class="row">
     <div class="col text-center">
-        <h1>Quiz on {{ slug }}, {{ num_questions }}</h1>
-    </div>
-</div>
-
-<div class="row mt-3">
-    <div class="col" style="margin-top: 3em;">
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores neque ullam ut, eveniet ratione eos,
-            fuga tempora vero ex a illo qui sint quo odio, fugit odit quibusdam itaque nihil. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Aliquam, non, doloremque veniam consequuntur laborum tempore odit
-            tempora eum dolores fugiat minus, blanditiis possimus quis omnis soluta molestiae nobis magni sunt? Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugit error earum nihil accusamus necessitatibus
-            reprehenderit dignissimos modi ducimus laudantium deserunt similique numquam fugiat obcaecati porro, quos
-            aperiam expedita. Vero.
-        </p>
-    </div>
-    <div class="col text-center">
-        <a href="https://placeholder.com"><img src="https://via.placeholder.com/250x250?text=Image+of+this+place"></a>
+        <h1>Quiz on {{ slug }}, {{ num_questions }} questions total</h1>
     </div>
 </div>
 
@@ -31,7 +14,7 @@
     <div class="col-md-8">
         {% for question in questions %}<h4>{{ question }}</h5>
             {% for choice in choices %} {% if choice.question == question %}
-                <p><input type="radio" id="choice" name="{{ question }}" value="{{ choice }}"><label for="choice">{{ choice }}</label></p>
+                <input type="radio" id="choice" name="{{ question }}" value="{{ choice }}"><label for="choice">{{ choice }}</label>
                 <!-- <input type="checkbox" value=""> -->
             {% endif %} {% endfor %}
         {% endfor %}
