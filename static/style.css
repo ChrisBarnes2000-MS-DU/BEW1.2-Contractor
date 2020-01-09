@@ -3,14 +3,14 @@ body {
 }
 
 .page-footer {
-margin-top: 3vh !important;
+    margin-top: 3vh !important;
 }
 
 #footer {
-position: absolute;
-bottom: 0;
-right: 0;
-left: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .footer-copyright{
@@ -74,6 +74,11 @@ label {
 
 .fa-youtube {
     color: red;
+}
+
+.carousel-item {
+    height: 480px;
+    contain: content;
 }
 
 .carousel-indicators li{
