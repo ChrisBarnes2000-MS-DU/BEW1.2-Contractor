@@ -1,3 +1,4 @@
+/* BASE/MAIN EDITS */
 body {
     background: lightgrey url("images/background.jpg") center;
 }
@@ -25,11 +26,9 @@ body {
     color: black;
 }
 
-h1 {
-    color: orangered;
-}
-
-h2, h3, h4, p {
+/* FONT EDITS */
+label {
+    font-size: x-large;
     color: white;
 }
 
@@ -38,14 +37,38 @@ ul {
     font-size: x-large;
 }
 
+h1 {
+    color: orangered;
+}
+
+h2, h3, h4, p {
+    color: white;
+}
+
 h3 a, h3 a:hover{
     color: #007bff
 }
 
+/* INDEX EDITS */
+.carousel-indicators li{
+    width: 50px !important;
+    height: 50px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    text-indent: 0px !important;
+}
+
+.carousel-indicators li img{
+    width: 50px;
+    height: 50px;
+}
+
+/* LOCATIONS EDITS */
 .card a, .card a:hover{
     color: #007bff
 }
 
+/* HIGHSCORE EDITS */
 .score {
     background-color: gray;
     width: 300px;
@@ -56,11 +79,7 @@ h3 a, h3 a:hover{
     text-align: center;
 }
 
-label {
-    font-size: x-large;
-    color: white;
-}
-
+/* FA EDIT */
 .fa-edit {
     margin-top: 0.2em;
     margin-left: 0.3em;
@@ -79,22 +98,4 @@ label {
 
 .fa-youtube {
     color: red;
-}
-
-.carousel-item {
-    /* height: 480px; */
-    contain: content;
-}
-
-.carousel-indicators li{
-    width: 75px !important;
-    height: 75px !important;
-    margin-left: 15px !important;
-    margin-right: 15px !important;
-    text-indent: 0px !important;
-}
-
-.carousel-indicators li img{
-    width: 75px !important;
-    height: 75px !important;
 }
