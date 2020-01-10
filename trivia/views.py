@@ -18,8 +18,11 @@ def trivia(request, slug):
     choices = Choice.objects.filter(question__quiz__slug=slug).order_by('created')
     num_questions = questions.count()
 
+    total_points = sum([question.points for question in questions])
+
     context = {
         'slug': slug,
+        'total_points': total_points,
         'num_questions': num_questions,
         'questions': questions,
         'choices': choices,

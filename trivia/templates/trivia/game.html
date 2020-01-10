@@ -4,7 +4,8 @@
 {% block content %}
 <div class="row">
     <div class="col text-center">
-        <h1>Quiz on {{ slug }}, {{ num_questions }} questions total</h1>
+        <h1>Quiz on {{ slug }}, total points: {{ total_points }}</h1>
+        <h1>{{ num_questions }} questions</h1>
     </div>
 </div>
 
@@ -12,8 +13,11 @@
     <form action="" method="POST">{% csrf_token %}
         {% for question in questions %}<h4>{{ question }}</h5>
             {% for choice in choices %} {% if choice.question == question %}
-                <input type="radio" id="choice" name="{{ question }}" value="{{ choice }}"><label for="choice">{{ choice }}</label>
-                <!-- <input type="checkbox" value=""> -->
+                {% if question.multiple %}
+                    <input type="checkbox" id="choice" name="{{ question }}" value="{{ choice }}"><label for="choice">{{ choice }}</label>
+                {% else %}
+                    <input type="radio" id="choice" name="{{ question }}" value="{{ choice }}"><label for="choice">{{ choice }}</label>
+                {% endif %}
             {% endif %} {% endfor %}
         {% endfor %}
         <hr>
