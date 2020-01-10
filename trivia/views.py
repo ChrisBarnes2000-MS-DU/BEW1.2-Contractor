@@ -6,7 +6,7 @@ from django.views import generic
 from django.urls import reverse
 
 from trivia.models import Question, Choice
-from trivia.forms import QuizForm
+# from trivia.forms import QuizForm
 from locations.models import Page
 
 def trivia(request, slug):
@@ -78,22 +78,3 @@ def trivia(request, slug):
 #         Excludes any questions that aren't published yet.
 #         """
 #         return Question.objects.filter(pub_date__lte=timezone.now())
-
-
-
-
-
-
-
-
-
-
-
-
-
-def Score_board(request):
-    template_name = 'trivia/score_board.html'
-    context = {
-        'highscores': ['1','2','5','133','80'],
-    }
-    return render(request, template_name, context)

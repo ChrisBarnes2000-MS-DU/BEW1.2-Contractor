@@ -10,7 +10,7 @@
 </div>
 
 <div class="row mb-5">
-    <form action="" method="POST">{% csrf_token %}
+    <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
         {% for question in questions %}<h4>{{ question }}</h5>
             {% for choice in choices %} {% if choice.question == question %}
                 {% if question.multiple %}
