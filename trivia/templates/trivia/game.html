@@ -11,20 +11,24 @@
 
 <div class="row mb-5">
     <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        
         {% for question in questions %}<h4>{{ question }}</h5>
             {% for choice in choices %} {% if choice.question == question %}
                 {% if question.multiple %}
                     <input type="checkbox" id="choice" name="{{ question }}" value="{{ choice }}"><label for="choice">{{ choice }}</label>
                 {% else %}
-                    <input type="radio" id="choice" name="{{ question }}" value="{{ choice }}"><label for="choice">{{ choice }}</label>
+                    <input type="radio" id="choice" name="choice" value="{{ choice }}"><label for="choice">{{ choice }}</label>
+                    <!-- {{ question }} -->
                 {% endif %}
             {% endif %} {% endfor %}
         {% endfor %}
         <hr>
         <div class="text-center">
             <a class="btn btn-primary" href="{% url 'highscore' %}">Submit</a>
-            <!-- <button type="submit" class="btn btn-primary"></button> -->
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
         </div>
     </form>
 </div> <!-- end Row -->
 {% endblock %}
+
+<!-- {% url 'grade' slug %} -->
