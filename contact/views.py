@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from contact.forms import ContactForm
 
 def emailView(request):
+    template_name = "contact/email.html"
     if request.method == 'GET':
         form = ContactForm()
     else:
@@ -18,7 +19,7 @@ def emailView(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
-    return render(request, "email.html", {'form': form})
+    return render(request, template_name, {'form': form})
 
 def successView(request):
     return HttpResponse('Success! Thank you for your message.')

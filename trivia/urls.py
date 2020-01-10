@@ -2,7 +2,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from .views import trivia
+from trivia.views import trivia
 
 urlpatterns = [
     # ex: /trivia/san-francisco/

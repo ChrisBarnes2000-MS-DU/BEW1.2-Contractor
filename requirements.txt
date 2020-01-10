@@ -3,7 +3,12 @@ django-db==0.0.7
 django-leaderboard==0.1.0
 django-model-utils==4.0.0
 djangorestframework==3.10.3
+leaderboard==3.7.3
 python-dotenv==0.10.3
 pytz==2019.3
+redis==3.3.11
+requests==2.22.0
+six==1.13.0
 sqlparse==0.3.0
-gunicorn
+virtualenv==16.7.9
+zipp==0.6.0

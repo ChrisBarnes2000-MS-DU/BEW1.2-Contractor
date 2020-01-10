@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     'accounts',
     'contact',
+    'scoreboard',
     'locations',
     'rest_framework',
     'trivia',
