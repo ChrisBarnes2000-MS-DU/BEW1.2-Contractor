@@ -39,7 +39,7 @@ sqlparse==0.3.0
 toml==0.10.0
 tox==3.14.3
 typed-ast==1.4.0
-urllib3==1.25.7
+urllib3==1.25.8
 virtualenv==16.7.9
 wrapt==1.11.2
 zipp==0.6.0
