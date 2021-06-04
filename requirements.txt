@@ -4,7 +4,7 @@ autopep8==1.4.4
 certifi==2019.11.28
 chardet==3.0.4
 defusedxml==0.6.0
-Django==3.0
+Django==3.1.9
 django-allauth==0.41.0
 django-db==0.0.7
 django-leaderboard==0.1.0
